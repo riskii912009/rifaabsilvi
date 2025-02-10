@@ -1,0 +1,6 @@
+.bg-white p-4 rounded-lg shadow-md flex items-center{
+    background-color: aqua;
+}
+.w-20 h-20 object-cover rounded-lg{
+    background-color: aqua;
+}

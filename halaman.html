@@ -1,0 +1,119 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CAKE
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto">
+  <header class="bg-white shadow">
+   <div class="container mx-auto flex items-center justify-between py-4 px-6">
+    <div class="flex items-center">
+    <h6 class="uppercase">Toko Online Donnat</h6>
+    </div>
+   </div>
+   <nav class="bg-gray-100">
+    <div class="container mx-auto flex space-x-4 py-2 px-6">
+     <a class="text-green-500 font-bold" href="#">
+      HOME
+     </a>
+   </nav>
+  </header>
+  <main>
+   <div class="relative">
+    <img alt="Fresh tomatoes background" class="w-full h-96 object-cover" height="250" src="https://img.freepik.com/premium-photo/funny-top-view-donuts-background-abstract-colorful_916191-13905.jpg" width="250"/>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+     <p class="text-lg">
+      Fuel Your Body, Feed Your Soul with Organic Goodness
+     </p>
+     <h1 class="text-6xl font-bold">
+      ALWAYS ORGANIC
+     </h1>
+     <div>
+    </div>
+</div>
+</div>
+</main>
+<div>
+</div><br>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product Card 1 -->
+ <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-between">
+    <img src="https://media.istockphoto.com/id/538335769/id/foto/donat-dengan-taburan-terisolasi.jpg?s=612x612&w=0&k=20&c=cXxVawsja_b1RDWEt7-bVozf4WNVKwSMkVkZjuFRkyo=" alt="Relaxed Short Full Sleeve" class="w-20 h-20 object-cover rounded-lg">
+    <div class="ml-4">
+        <h2 class="text-lg font-semibold">Cakes</h2>
+        <p class="text-gray-500">blubery</p>
+        <p class="text-gray-500">Rp 1000</p>
+    </div>
+    <button onclick="bukaForm('Produk 1')" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded">Pesan</button>
+</div>
+<div id="formPemesanan" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-6 rounded shadow-lg w-96">
+        <h2 class="text-xl font-semibold mb-4">Form Pemesanan</h2>
+        <form action="detail.php" method="POST">
+            <input type="hidden" id="namaProduk" name="namaProduk">
+
+            <div class="mb-4">
+                <label for="alamat" class="block text-sm font-medium">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" required class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="jumlah" class="block text-sm font-medium">Jumlah Barang:</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" required class="w-full p-2 border rounded" oninput="hitungTotal()">
+            </div>
+
+            <div class="mb-4">
+                <label for="metodePembayaran" class="block text-sm font-medium">Metode Pembayaran:</label>
+                <select id="metodePembayaran" name="metodePembayaran" required class="w-full p-2 border rounded">
+                    <option value="">Pilih Metode</option>
+                    <option value="Kartu Kredit">Kartu Kredit</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="COD">COD</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="totalHarga" class="block text-sm font-medium">Total Harga:</label>
+                <input type="text" id="totalHarga" name="totalHarga" readonly class="w-full p-2 border rounded bg-gray-200">
+            </div>
+
+            <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded">Kirim Pesanan</button>
+            <button type="button" onclick="tutupForm()" class="ml-2 bg-red-500 text-white py-2 px-4 rounded">Batal</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function hitungTotal() {
+        let jumlah = document.getElementById("jumlah").value;
+        let hargaSatuan = 1000;
+        let total = jumlah * hargaSatuan;
+        document.getElementById("totalHarga").value = "Rp " + total.toLocaleString("id-ID");
+    }
+</script>
+    <script>
+        function bukaForm(namaProduk) {
+            document.getElementById("namaProduk").value = namaProduk;
+            document.getElementById("formPemesanan").classList.remove("hidden");
+        }
+
+        function tutupForm() {
+            document.getElementById("formPemesanan").classList.add("hidden");
+        }
+    </script>
+</div>
+ </body>
+</html>

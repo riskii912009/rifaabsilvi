@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="font-roboto">
+    <header>
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center">
+                <img alt="Logo" class="h-10" src="https://storage.googleapis.com/a1aa/image/GnoAn8gePwoiuQEhibaT3XPtFH01jK_8edl6edEvJDY.jpg" />
+            </div>
+        </div>
+    </header>
+    <main>
+     <div class="container mx-auto p-6">
+    <div class="wrapper">
+        <div class="title">Bayar</div>
+        <form id="paymentForm">
+            <div class="field">
+                <input type="text" id="email" placeholder="Alamat">
+            </div> <br> <br>
+            <div class="field">
+                <input type="number" id="jumlah" min="1" placeholder="Jumlah"> 
+            </div> <br>
+        
+                    <div class="field">
+                        <label for="paymentMethod">Metode Bayar</label>
+                        <select id="paymentMethod" required>
+                            <option value="">Pilih Metode</option>
+                            <option value="credit_card">Kartu Kredit</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank_transfer">Transfer Bank</option>
+                        </select>
+                    </div> <br>
+                    <div class="field">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Bayar Sekarang</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
